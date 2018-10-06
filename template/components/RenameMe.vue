@@ -3,9 +3,8 @@
     <h1>{{ title }}</h1>
 
     <div>
-      <h2>{{ $store.state.title }}</h2>
-      <h4>{{ $store.state.author }}</h4>
-      <p>{{ $store.state.description }}</p>
+      <h4>{{ author }}</h4>
+      <p>{{ description }}</p>
     </div>
   </div>
 </template>

@@ -11,7 +11,7 @@ export default {
     };
   },
   components: {
-    AppLogo
+    RenameMe
   },
   // More info at https://css-tricks.com/methods-computed-and-watchers-in-vue-js/
   // computed: {}, // Data with computed logic
