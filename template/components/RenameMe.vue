@@ -1,9 +1,9 @@
 <template>
   <div class="component-RenameMe">
-    <h1>{{ title }}</h1>
+    <h1>{{ name }}</h1>
 
     <div>
-      <h4>{{ author }}</h4>
+      <h4>{{ escaped author }}</h4>
       <p>{{ description }}</p>
     </div>
   </div>

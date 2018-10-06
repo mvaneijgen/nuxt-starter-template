@@ -52,7 +52,7 @@ module.exports = {
     // "@nuxtjs/pwa"
   ],
   manifest: {
-    name: "{{ name }} | {{ author }}",
+    name: "{{ name }} | {{ escape author }}",
     short_name: "{{ name }}",
     lang: "en",
     icons: [
