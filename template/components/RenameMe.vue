@@ -3,7 +3,6 @@
     <h1>{{ name }}</h1>
 
     <div>
-      <h4>{{ escaped author }}</h4>
       <p>{{ description }}</p>
     </div>
   </div>
