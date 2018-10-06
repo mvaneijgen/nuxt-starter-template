@@ -47,7 +47,10 @@ module.exports = {
     //   base: '/wish-list/',
     // },
   },
-  modules: ["@nuxtjs/axios", "@nuxtjs/pwa"],
+  modules: [
+    "@nuxtjs/axios",
+    // "@nuxtjs/pwa"
+  ],
   manifest: {
     name: "{{ name }} | {{ author }}",
     short_name: "{{ name }}",
