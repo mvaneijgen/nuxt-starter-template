@@ -1,16 +1,17 @@
 const routerBase =
   process.env.DEPLOY_ENV === "GH_PAGES"
     ? {
-        router: {
-          base: "/wish-list/",
-        },
-      }
+      router: {
+        base: "/",
+      },
+    }
     : {};
 
 module.exports = {
   /*
   ** Headers of the page
   */
+  ...routerBase,
   head: {
     title: "{{ name }}",
     meta: [
@@ -41,16 +42,37 @@ module.exports = {
       },
     ],
   },
+  // ⚙️  Nuxt pre generate the following pages as static HTML
   generate: {
     dir: "docs",
-    // router: {
-    //   base: '/wish-list/',
-    // },
+    // routes: [
+    //   '/projecten',
+    //   '/over',
+    //   '/workflow',
+    //   '/contact',
+    //   '/privacy',
+    //   '/project/websites',
+    //   '/project/intranet',
+    //   '/project/datavisualisatie',
+    // ],
   },
+  // END ⚙️ 
+  // Nuxt 📦 modules
   modules: [
-    "@nuxtjs/axios",
-    // "@nuxtjs/pwa"
+    // "@nuxtjs/axios",
+    // "@nuxtjs/apollo",
+    // '@nuxtjs/redirect-module',
   ],
+  // apollo: {
+  //   clientConfigs: {
+  //     default: '@/apollo/client-configs/default.js'
+  //   }
+  // },
+  render: {
+    static: {
+      maxAge: 1000 * 60 * 60 * 24 * 7
+    }
+  },
   manifest: {
     name: "{{ name }} | {{ escape author }}",
     short_name: "{{ name }}",
@@ -86,15 +108,11 @@ module.exports = {
   //     },
   //   ],
   // },
-  axios: {
-    // proxyHeaders: false
-  },
-  ...routerBase,
   css: ["@/assets/css/main.scss"],
   /*
   ** Customize the progress bar color
   */
-  loading: { color: "#0ba" },
+  loading: { color: "#F53" },
   /*
   ** Build configuration
   */

@@ -1,0 +1,19 @@
+query GetTeam {
+  team(where: {orderby: {field: MENU_ORDER, order: ASC}}) {
+    nodes {
+      title
+      excerpt
+      featuredImage {
+        sourceUrl
+        altText
+        mediaDetails {
+          sizes {
+            sourceUrl
+            width
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+# query GET_MENUS($slug: String) {
+#   menus(where: {slug: $slug}) {
+#     nodes {
+#       menuItems {
+#         edges {
+#           node {
+#             id
+#             label
+#             url
+#           }
+#         }
+#       }
+#     }
+#   }
+# }
+query {
+  menuItems(where: {location: PRIVACY_FOOTER}) {
+    edges {
+      node {
+        id
+        label
+        url
+      }
+    }
+  }
+}
+

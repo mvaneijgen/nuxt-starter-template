@@ -1,0 +1,5 @@
+/assets/legal  /privacy
+/assets/legal/*  /privacy
+/team/*  /over
+/team  /over
+/project/*  /projecten
