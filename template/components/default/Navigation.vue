@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import menu from "~/apollo/queries/menu";
 import SlideNav from "@/components/default/SlideNav.vue";
 
 export default {

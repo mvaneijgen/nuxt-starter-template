@@ -17,14 +17,13 @@
           </ul>
         </div>
       </div>
+      <CallToAction />
     </div>
   </div>
 </template>
 
 <script>
-import menu from "~/apollo/queries/menu";
-
-import CallToAction from "@/components/elements/CallToAction.vue";
+import CallToAction from "@/components/default/CallToAction.vue";
 
 export default {
   // props: ['item'],
